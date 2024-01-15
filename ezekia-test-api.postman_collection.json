@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "736d9de9-cdd1-4a29-99af-b0fce29cd7dd",
+		"name": "ezekia-test-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "9827872"
+	},
+	"item": [
+		{
+			"name": "Show users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "James",
+							"type": "text"
+						},
+						{
+							"key": "hourly_rate",
+							"value": "52",
+							"type": "text"
+						},
+						{
+							"key": "currency",
+							"value": "GBP",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://ezekia-test-api.test/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Show user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "James",
+							"type": "text"
+						},
+						{
+							"key": "hourly_rate",
+							"value": "52",
+							"type": "text"
+						},
+						{
+							"key": "currency",
+							"value": "GBP",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://ezekia-test-api.test/api/users/1?currency=GBP",
+					"protocol": "http",
+					"host": [
+						"ezekia-test-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"users",
+						"1"
+					],
+					"query": [
+						{
+							"key": "currency",
+							"value": "GBP"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "James",
+							"type": "text"
+						},
+						{
+							"key": "hourly_rate",
+							"value": "52",
+							"type": "text"
+						},
+						{
+							"key": "currency",
+							"value": "GBP",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://ezekia-test-api.test/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://ezekia-test-api.test/api/users/11?name=James Bond&hourly_rate=33.89&currency=EUR",
+					"protocol": "http",
+					"host": [
+						"ezekia-test-api",
+						"test"
+					],
+					"path": [
+						"api",
+						"users",
+						"11"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "James Bond"
+						},
+						{
+							"key": "hourly_rate",
+							"value": "33.89"
+						},
+						{
+							"key": "currency",
+							"value": "EUR"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://ezekia-test-api.test/api/users/11"
+			},
+			"response": []
+		}
+	]
+}
